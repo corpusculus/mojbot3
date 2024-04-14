@@ -30,6 +30,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Install dependencies (if needed)
+        run: npm install || yarn install
+      - name: Run React Vite.js development server
+        run: react-vite-ts@0.0.0 dev /workspaces/mojbot3 > vite
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
