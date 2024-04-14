@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies (if needed)
         run: npm install || yarn install
       - name: Run React Vite.js development server
-        run: dev /workspaces/mojbot3 > vite
+        run: tsc && vite build
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
